@@ -4,7 +4,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - PTDebugView (0.1.0)
+  - GGXSwiftExtension (0.5.8)
+  - PTDebugView (0.1.1):
+    - GGXSwiftExtension
+    - SnapKit
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -13,6 +17,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - GGXSwiftExtension
+    - SnapKit
 
 EXTERNAL SOURCES:
   PTDebugView:
@@ -20,8 +26,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  PTDebugView: 91a86673fada66a5c2935d7105d8951cb1f871f2
+  GGXSwiftExtension: 23fc72e1c2b4bafc4380fd493fe128b9fc9f6bcd
+  PTDebugView: 3b411b68e6c16c32d4ddd62163a750bffd28bc77
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 47d56918e0943edcd2ccdab8ad1525ebd85aa1c9
+PODFILE CHECKSUM: 8739ea85d652d2c84346b1a8257d958d4983657d
 
 COCOAPODS: 1.15.0
