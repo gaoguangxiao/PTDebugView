@@ -13,8 +13,8 @@ public class ZKWLog: NSObject {
 
     @discardableResult
     public override init() {
-        if let cachesPath = FileManager.cachesPath {
-            ZKWLog.logPath = cachesPath + "/" + "app.log"
+        if let documentPath = FileManager.documentPath {
+            ZKWLog.logPath = documentPath + "/" + "app.log"
             ZKLog("log文件：" + ZKWLog.logPath)
             if !FileManager.isFileExists(atPath: ZKWLog.logPath) {
                 //创建.log文件
@@ -22,6 +22,8 @@ public class ZKWLog: NSObject {
             } else {
                
             }
+        } else {
+            print("documentPath is empty")
         }
     }
     
@@ -53,12 +55,13 @@ public class ZKWLog: NSObject {
         ZKLog(result)
     }
                   
-    @objc static func Log( _ message: String){
-        ZKLog(message)
+    @objc public static func Log( _ message: String){
+        let wStr = "\n-------\(Date.getCurrentDateStr("yyyy-MM-dd HH:mm:ss SSS"))日志-------\n" + message
+        ZKLog(wStr)
         if logPath.length > 0 ,let _logPath = logPath.toFileUrl {
             let fh = try? FileHandle.init(forWritingTo: _logPath)
             fh?.seekToEndOfFile()
-            let msg = message  + "\n"
+            let msg = wStr  + "\n"
             if let wData = msg.data(using: .utf8) {
                 fh?.write(wData)
             }
