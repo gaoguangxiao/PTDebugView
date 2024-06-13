@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import PTDebugView
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        debugTest()
+//        debugView.addButton(title: "业务", right: 10, top: 160,action: #selector(kuozhan))
     }
-
+    
+    @objc func kuozhan()  {
+        ZKLog("扩展业务log")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

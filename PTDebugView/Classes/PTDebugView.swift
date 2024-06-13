@@ -27,9 +27,12 @@ public typealias DebugButtonEvent = (_ event: PTDebugViewButtonEvent) -> Void
 
 var web_log = ""
 
+@objcMembers
 public class PTDebugView: UIView {
     
     private var debugTextView =  UITextView.init()
+    
+    private var debugClickView = UIView()
     
     private var clickButtonEvent :((PTDebugViewButtonEvent)->Void)? = nil
     
@@ -56,9 +59,10 @@ public class PTDebugView: UIView {
         superView.addSubview(self)
         self.clickButtonEvent = debugEvent
         self.snp.makeConstraints { (maker) in
-            maker.edges.equalToSuperview()
+//            maker.edges.equalToSuperview()
+            maker.top.equalTo(TopBarHeight)
 //            maker.top.equalToSuperview()
-//            maker.left.bottom.right.equalToSuperview()
+            maker.left.bottom.right.equalToSuperview()
         }
 //        defaultApiUrl = apiURL
         self.setUI()
@@ -69,6 +73,17 @@ public class PTDebugView: UIView {
         //        tap.numberOfTouchesRequired = 2
         superView.addGestureRecognizer(tap)
         
+//        addSubview(debugClickView)
+//        debugClickView.snp.makeConstraints { make in
+//            make.left.equalToSuperview()
+//            make.width.equalTo(200)
+//            make.height.equalTo(200)
+//            make.bottom.equalToSuperview()
+//        }
+//        debugClickView.backgroundColor = .red
+//        if translation.x < 200 && translation.y > (windowHeight ?? 600) - 200 {
+//            showDebugView()
+//        }
     }
     
     @objc func clickEvent( _ tap : UIGestureRecognizer) {
@@ -120,14 +135,16 @@ public class PTDebugView: UIView {
         }
         
         self.addButton(title: "隐藏", right: 10, action: #selector(closeDebugView))
-        self.addButton(title: "刷新", right: 10+90, action: #selector(reload))
-        self.addButton(title: "切换地址", right: 10+90+90, action: #selector(changeUrl))
-        self.addButton(title: "清除log", right: 10+90+90+90, action: #selector(clearLog))
-        self.addButton(title: "分享log", right: 10+90+90+90+90, action: #selector(openBridgeCall))
-        recordLogBtn = self.addButton(title: "显示开录", right: 10+90, top: 60, action: #selector(openRecordLogCall))
-        self.addButton(title: "启用离线包", right: 10+90+90, top: 60,action: #selector(didOfflineBtnCache(sender:)))
-        self.addButton(title: "禁用离线包", right: 10+90+90+90, top:60,action: #selector(didOfflineBtnCache(sender:)))
-        self.addButton(title: "清除离线包", right: 10+90+90+90+90, top: 60, action: #selector(didOfflineBtnCache(sender:)))
+        self.addButton(title: "清除log", right: 10+90, action: #selector(clearLog))
+        self.addButton(title: "分享log", right: 10+90+90, action: #selector(openBridgeCall))
+        
+        self.addButton(title: "刷新", right: 10, top: 60, action: #selector(reload))
+        self.addButton(title: "切换地址", right: 10+90, top: 60, action: #selector(changeUrl))
+        recordLogBtn = self.addButton(title: "显示开录", right: 10+90+90, top: 60, action: #selector(openRecordLogCall))
+        
+        self.addButton(title: "启用离线包", right: 10, top: 110,action: #selector(didOfflineBtnCache(sender:)))
+        self.addButton(title: "禁用离线包", right: 10+90, top:110,action: #selector(didOfflineBtnCache(sender:)))
+        self.addButton(title: "清除离线包", right: 10+90+90, top: 110, action: #selector(didOfflineBtnCache(sender:)))
         
     }
     
@@ -212,15 +229,6 @@ public class PTDebugView: UIView {
         vcc?.present(activityViewController, animated: true, completion: nil)
     }
     
-    @objc func clearWebCache() {
-
-    }
-    
-    @objc func openAppTestVc(){
-        //        let jsTestVc = RSTestViewController()
-        //        homepageVc.navigationController?.pushViewController(jsTestVc, animated: true)
-    }
-    
     @objc func clearLog (){
         web_log = ""
         self.debugTextView.text = ""
@@ -229,10 +237,5 @@ public class PTDebugView: UIView {
     
     @objc func didOfflineBtnCache(sender: UIButton) {
         self.clickButtonEvent?(.pkgAction(sender.tag))
-        //        RSWebOfflineManager.sha
-        //            URLProtocol.unregisterClass(PTURLProtocol.self)
-        //            URLProtocol.wk_unregisterScheme("http")
-        //            URLProtocol.wk_unregisterScheme("https")
-        //            HUD.flash("禁用成功")
     }
 }
