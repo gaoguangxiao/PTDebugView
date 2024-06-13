@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        debugTest()
+//        debugTest()
 //        debugView.addButton(title: "业务", right: 10, top: 160,action: #selector(kuozhan))
     }
     

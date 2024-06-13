@@ -41,6 +41,6 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   
   s.dependency 'GGXSwiftExtension'
-  s.dependency 'SnapKit'
+#  s.dependency 'SnapKit'
       
 end
