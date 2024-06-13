@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTDebugView'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = '删除视图日志'
   
 # This description is used to generate tags and improve search results.

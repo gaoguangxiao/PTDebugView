@@ -28,7 +28,7 @@ public class ZKWLog: NSObject {
         }
     }
     
-    static var read: String {
+    public static var read: String {
         var content:String?
         if logPath.length > 0 ,let _logPath = logPath.toFileUrl {
             let fh = try? FileHandle.init(forReadingFrom: _logPath)
