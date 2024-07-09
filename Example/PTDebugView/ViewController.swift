@@ -11,15 +11,24 @@ import PTDebugView
 
 class ViewController: UIViewController {
     
+    @PTLogger(category: "vc")
+    private var logger
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 //        debugTest()
-//        debugView.addButton(title: "业务", right: 10, top: 160,action: #selector(kuozhan))
+//        debugView.addButton(title: "业务", right: 10, top: 160,action: #selector(kuozhan)
+        logger.debug("扩展业务log")
+        logger.info("扩展业务log")
+        logger.error("扩展业务log")
+        logger.info("扩展业务log")
+        logger.log("扩展业务log",type: .fault)
     }
     
     @objc func kuozhan()  {
         ZKLog("扩展业务log")
+        logger.info("扩展业务log")
     }
     
     override func didReceiveMemoryWarning() {

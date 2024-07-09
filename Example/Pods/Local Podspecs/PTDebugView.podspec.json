@@ -1,7 +1,7 @@
 {
   "name": "PTDebugView",
-  "version": "0.1.4",
-  "summary": "debug日志记录",
+  "version": "0.1.7",
+  "summary": "增加日志时间打印",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/PTDebugView.git",
-    "tag": "0.1.4"
+    "tag": "0.1.7"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "10.0"
   },
   "swift_versions": "5.0",
   "source_files": "PTDebugView/Classes/**/*",

@@ -5,7 +5,7 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - GGXSwiftExtension (0.5.8)
-  - PTDebugView (0.1.4):
+  - PTDebugView (0.1.7):
     - GGXSwiftExtension
 
 DEPENDENCIES:
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   GGXSwiftExtension: 23fc72e1c2b4bafc4380fd493fe128b9fc9f6bcd
-  PTDebugView: 1d1ebc51a6556d4e7b50ea7679e8d8e07c49dc10
+  PTDebugView: f820bcba8b30ba421016b45f31812c0fdbd731a7
 
 PODFILE CHECKSUM: 8739ea85d652d2c84346b1a8257d958d4983657d
 
