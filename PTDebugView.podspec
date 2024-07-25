@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTDebugView'
-  s.version          = '0.1.8'
-  s.summary          = '增加日志时间打印'
+  s.version          = '0.1.9'
+  s.summary          = 'feat：只在debug打印'
   
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
