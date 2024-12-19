@@ -8,6 +8,6 @@ target 'PTDebugView_Example' do
   target 'PTDebugView_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+#    pod 'FBSnapshotTestCase' , '~> 2.1.4'
   end
 end
