@@ -1,6 +1,6 @@
 PODS:
-  - GGXSwiftExtension (0.7.4)
-  - PTDebugView (0.2.0):
+  - GGXSwiftExtension (0.8.1)
+  - PTDebugView (0.2.3):
     - GGXSwiftExtension
     - SnapKit
   - SnapKit (5.7.1)
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: 438330b80997b69e09968004588ce41d8ff36583
-  PTDebugView: 6f575c173b057f3ef27ff34ba23c9e813ab71869
+  GGXSwiftExtension: 38e8e4f91a389c599c4336bb545132d8b56d1573
+  PTDebugView: c6535bf853ffc848496413519ac0da3f2cbd1826
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
 PODFILE CHECKSUM: f4187f60e07001e71897b1d119afbc832c3dd359
 
-COCOAPODS: 1.16.1
+COCOAPODS: 1.16.2

@@ -1,7 +1,7 @@
 {
   "name": "PTDebugView",
-  "version": "0.2.0",
-  "summary": "feat：只在debug打印",
+  "version": "0.2.3",
+  "summary": "feat：PTDebugView视图可以改变字体颜色",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/PTDebugView.git",
-    "tag": "0.2.0"
+    "tag": "0.2.3"
   },
   "swift_versions": "5.0",
   "platforms": {
@@ -21,12 +21,8 @@
   },
   "source_files": "PTDebugView/Classes/**/*",
   "dependencies": {
-    "GGXSwiftExtension": [
-
-    ],
-    "SnapKit": [
-
-    ]
+    "GGXSwiftExtension": [],
+    "SnapKit": []
   },
   "swift_version": "5.0"
 }

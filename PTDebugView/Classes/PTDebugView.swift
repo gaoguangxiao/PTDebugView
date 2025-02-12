@@ -111,8 +111,7 @@ public class PTDebugView: UIView {
             if let info = self.headInfoLog {
 //                self.debugTextView.text = info + web_log)
                 let natt = NSMutableAttributedString(string: info,
-                                                     attributes: [.foregroundColor: UIColor.black,
-                                                                  .font: UIFont.systemFont(ofSize: 18)])
+                                                     attributes: [.foregroundColor: UIColor.black])
                 natt.append(mAttributedString)
 
                 self.debugTextView.attributedText = natt

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTDebugView'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'feat：PTDebugView视图可以改变字体颜色'
   
 # This description is used to generate tags and improve search results.
