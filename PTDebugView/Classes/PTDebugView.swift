@@ -246,6 +246,7 @@ public class PTDebugView: UIView {
     
     @objc func clearLog (){
         web_log = ""
+        mAttributedString = NSMutableAttributedString(string: "")//日志富文本
         self.debugTextView.text = ""
         //        ZKWLog.clear()
     }
