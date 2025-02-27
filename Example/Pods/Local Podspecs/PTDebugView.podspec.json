@@ -1,7 +1,7 @@
 {
   "name": "PTDebugView",
-  "version": "0.2.3",
-  "summary": "feat：PTDebugView视图可以改变字体颜色",
+  "version": "0.3.1",
+  "summary": "fix：PTDebugView视图debug信息不展示",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,13 +13,17 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/PTDebugView.git",
-    "tag": "0.2.3"
+    "tag": "0.3.1"
   },
   "swift_versions": "5.0",
   "platforms": {
     "ios": "12.0"
   },
   "source_files": "PTDebugView/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ],
   "dependencies": {
     "GGXSwiftExtension": [],
     "SnapKit": []

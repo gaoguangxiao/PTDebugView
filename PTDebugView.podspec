@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTDebugView'
-  s.version          = '0.3.1'
-  s.summary          = 'fix：PTDebugView视图debug信息不展示'
+  s.version          = '0.3.2'
+  s.summary          = 'fix：PTDebugView视图debug信息崩溃'
   
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -37,8 +37,7 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.frameworks = 'UIKit'
   
   s.dependency 'GGXSwiftExtension'
   s.dependency 'SnapKit'
