@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PTDebugView'
-  s.version          = '0.2.4'
-  s.summary          = 'fix：PTDebugView视图清除log修复'
+  s.version          = '0.3.1'
+  s.summary          = 'fix：PTDebugView视图debug信息不展示'
   
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

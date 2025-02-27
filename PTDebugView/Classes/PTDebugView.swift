@@ -9,7 +9,7 @@
 import Foundation
 import GGXSwiftExtension
 import SnapKit
-//import PTDebugView
+import UIKit
 
 public enum PTDebugViewButtonEvent {
     case ChangeUrl(PTDebugView)
@@ -50,8 +50,9 @@ public class PTDebugView: UIView {
     var actionBtnTag = 0
     
     public static func addLog(_ log : String, color: UIColor = .black) {
-        onceEnterApp_log = log + onceEnterApp_log
 #if DEBUG
+        onceEnterApp_log = log + onceEnterApp_log
+        
         let wStr = "\n-------\(Date.getCurrentDateStr("yyyy-MM-dd HH:mm:ss SSS"))日志-------\n" + log
         web_log = wStr + web_log
 //        let color = UIColor.red
